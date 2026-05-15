@@ -1,7 +1,0 @@
-backend/node_modules
-frontend-repo/node_modules
-
-backend/.env
-frontend-repo/.env.local
-
-.next
