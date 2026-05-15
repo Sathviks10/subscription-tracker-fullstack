@@ -19,10 +19,7 @@ const app = express();
 app.use(helmet()); // Set security HTTP headers
 
 // CORS configuration (allow frontend to connect)
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://subscription-tracker-two-psi.vercel.app'],
-  credentials: true
-}));
+app.use(cors());
 
 // Body parser
 app.use(express.json());
