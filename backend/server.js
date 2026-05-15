@@ -15,6 +15,9 @@ connectDB();
 
 const app = express();
 
+// Trust proxy for Render deployment (required by express-rate-limit)
+app.set('trust proxy', 1);
+
 // Security Middleware
 app.use(helmet()); // Set security HTTP headers
 
