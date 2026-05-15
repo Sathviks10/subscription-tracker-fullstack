@@ -28,7 +28,8 @@ export default function Register() {
       // Redirect to dashboard
       router.push("/");
     } catch (err) {
-      setError(err.response?.data?.message || "Something went wrong");
+      console.error("Register Error:", err);
+      setError(err.response?.data?.message || err.message || "Something went wrong");
     } finally {
       setLoading(false);
     }

@@ -27,7 +27,8 @@ export default function Login() {
       // Redirect to dashboard
       router.push("/");
     } catch (err) {
-      setError(err.response?.data?.message || "Invalid credentials");
+      console.error("Login Error:", err);
+      setError(err.response?.data?.message || err.message || "Invalid credentials");
     } finally {
       setLoading(false);
     }
